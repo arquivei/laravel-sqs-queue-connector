@@ -1,0 +1,36 @@
+{
+  "name": "arquivei/laravel-sqs-queue-connector",
+  "description": "Consumer queues with different event structures Illuminate pattern",
+  "license": "Apache-2.0",
+  "keywords": [
+    "laravel",
+    "aws",
+    "sqs",
+    "queue",
+    "connector"
+  ],
+  "require": {
+    "php": "^7.1.3",
+    "illuminate/support": "^5.6",
+    "illuminate/queue": "^5.6",
+    "aws/aws-sdk-php": "^3.0.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "SqsQueueConnector\\": "src/",
+      "SqsQueueConnector\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "SqsQueueConnector\\SqsQueueProvider"
+      ]
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
